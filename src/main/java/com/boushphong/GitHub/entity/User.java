@@ -10,8 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-
     protected String username;
     protected String password;
-
 }
