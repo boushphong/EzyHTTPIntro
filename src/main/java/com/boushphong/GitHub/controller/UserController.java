@@ -12,7 +12,6 @@ import lombok.Setter;
 @Setter
 @Controller("/api/v1/users")
 public class UserController {
-
     @EzyAutoBind
     protected UserService userService;
 
