@@ -2,18 +2,16 @@ package com.boushphong.GitHub.controller;
 
 import com.boushphong.GitHub.entity.User;
 import com.boushphong.GitHub.service.UserService;
-import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyhttp.core.exception.HttpConflictException;
 import com.tvd12.ezyhttp.core.exception.HttpNotFoundException;
 import com.tvd12.ezyhttp.core.response.ResponseEntity;
 import com.tvd12.ezyhttp.server.core.annotation.*;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
 
-@Setter
+@AllArgsConstructor
 @Controller("/api/v1/users")
 public class UserController {
-    @EzyAutoBind
-    protected UserService userService;
+    private final UserService userService;
 
     @DoPost("/add")
     public ResponseEntity addUser(@RequestBody User user) {
